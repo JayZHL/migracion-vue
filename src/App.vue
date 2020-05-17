@@ -1,28 +1,31 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <div class="container">
+      <nav style="text-align: center" class="navbar navbar-expand-lg navbar-light bg-light">
+        <span class="nav-item">
+          <a class="nav-link" href="#">Estudiantes</a>
+        </span>
+        |
+        <span class="nav-item">
+          <a class="nav-link" href="#">Cursos</a>
+        </span>
+      </nav>
+      <mi-tabla-estudiantes>Datos de estudiantes</mi-tabla-estudiantes>
+        <mi-tabla-cursos>Datos de cursos</mi-tabla-cursos>
+    </div>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import miTablaEstudiantes from "@/components/MiTablaEstudiantes.vue";
+import miTablaCursos from "@/components/MiTablaCursos.vue";
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
+    miTablaEstudiantes,
+    miTablaCursos,
   }
-}
+};
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
+<style></style>
